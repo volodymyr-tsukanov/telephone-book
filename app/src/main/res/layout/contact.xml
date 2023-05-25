@@ -1,0 +1,58 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/body"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/content_lin"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="5dp"
+			android:background="#FFD966"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/container_lin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="2dp"
+				android:gravity="center_vertical"
+				android:orientation="horizontal">
+				<de.hdodenhof.circleimageview.CircleImageView
+					android:id="@+id/icon_civ"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:src="@drawable/contact"
+					app:civ_border_width="0dp"
+					app:civ_border_color="#008DCD"
+					app:civ_circle_background_color="#30000000"
+					app:civ_border_overlay="true" />
+				<TextView
+					android:id="@+id/name_text"
+					android:focusable="false"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:text="TextView"
+					android:textSize="14sp"
+					android:textColor="#3E2723" />
+			</LinearLayout>
+			<TextView
+				android:id="@+id/number_text"
+				android:focusable="false"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="25dp"
+				android:padding="2dp"
+				android:text="TextView"
+				android:textSize="11sp"
+				android:textColor="#3E2723" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

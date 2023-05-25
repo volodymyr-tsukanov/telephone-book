@@ -1,0 +1,291 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+	<LinearLayout
+		android:id="@+id/toolbar_lin"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		android:background="#DFA67B"
+		android:gravity="center_vertical"
+		android:orientation="horizontal"
+		android:weightSum="9">
+		<ImageView
+			android:id="@+id/toolbarMenu"
+			android:layout_width="10dp"
+			android:layout_height="50dp"
+			android:src="@drawable/menu"
+			android:scaleType="fitStart"
+			android:layout_weight="5" />
+		<TextView
+			android:id="@+id/toolbarTitle_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="5dp"
+			android:layout_marginRight="5dp"
+			android:padding="5dp"
+			android:text="Telephone book"
+			android:textSize="20sp"
+			android:textStyle="bold"
+			android:textColor="#EFEBE9" />
+		<ImageView
+			android:id="@+id/toolbarNewContact"
+			android:layout_width="50dp"
+			android:layout_height="60dp"
+			android:layout_marginLeft="10dp"
+			android:src="@drawable/add_contact"
+			android:scaleType="fitEnd"
+			android:layout_weight="4" />
+	</LinearLayout>
+	<ScrollView
+		android:id="@+id/main_scroll"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<LinearLayout
+			android:id="@+id/body"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<LinearLayout
+				android:id="@+id/contacts_lin"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="4dp"
+				android:background="#FFD966"
+				android:orientation="horizontal"
+				android:layout_weight="2">
+				<androidx.recyclerview.widget.RecyclerView
+					android:id="@+id/contacts_recycler"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:background="@android:color/transparent"
+					android:layout_weight="3" />
+				<com.sayuti.lib.WaveSideBar
+					android:id="@+id/sort_wavesidebar"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:background="#F4B183"
+					app:sidebar_text_size="14sp"
+					app:sidebar_text_color="#3E2723"
+					android:layout_weight="12"
+					app:sidebar_text_alignment="left"
+					app:sidebar_position="right"
+					app:sidebar_max_offset="50dp" />
+			</LinearLayout>
+			<ScrollView
+				android:id="@+id/contact_scroll"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="2dp">
+				<LinearLayout
+					android:id="@+id/contact_lin"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:padding="8dp"
+					android:background="#F4B183"
+					android:orientation="vertical">
+					<TextView
+						android:id="@+id/contact_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:text="New Contact"
+						android:textSize="16sp"
+						android:textStyle="bold"
+						android:textColor="#3E2723"
+						android:layout_gravity="center_horizontal" />
+					<EditText
+						android:id="@+id/phoneNumber_edittext"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:textSize="14sp"
+						android:textColor="#EFEBE9"
+						android:hint="Phone number"
+						android:textColorHint="#FFF2CC"
+						android:inputType="phone"
+						android:maxLength="14" />
+					<LinearLayout
+						android:id="@+id/linear1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="2dp"
+						android:orientation="horizontal">
+						<EditText
+							android:id="@+id/name_edittext"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:padding="8dp"
+							android:textSize="14sp"
+							android:textColor="#EFEBE9"
+							android:hint="Name"
+							android:textColorHint="#FFF2CC"
+							android:maxLength="32" />
+						<EditText
+							android:id="@+id/surname_edittext"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_marginLeft="5dp"
+							android:padding="8dp"
+							android:textSize="14sp"
+							android:textColor="#EFEBE9"
+							android:hint="Surname"
+							android:textColorHint="#FFF2CC"
+							android:maxLength="32" />
+					</LinearLayout>
+					<EditText
+						android:id="@+id/job_edittext"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:textSize="14sp"
+						android:textColor="#EFEBE9"
+						android:hint="Job"
+						android:textColorHint="#FFF2CC"
+						android:maxLength="64" />
+					<EditText
+						android:id="@+id/email_edittext"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:textSize="14sp"
+						android:textColor="#EFEBE9"
+						android:hint="Email"
+						android:textColorHint="#FFF2CC"
+						android:maxLength="48" />
+					<EditText
+						android:id="@+id/address_edittext"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:textSize="14sp"
+						android:textColor="#EFEBE9"
+						android:hint="Address"
+						android:textColorHint="#FFF2CC"
+						android:maxLength="64" />
+					<EditText
+						android:id="@+id/notes_edittext"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:textSize="14sp"
+						android:textColor="#EFEBE9"
+						android:hint="Notes"
+						android:textColorHint="#FFF2CC"
+						android:maxLength="512" />
+					<Button
+						android:id="@+id/addContact_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:background="#5D4037"
+						android:text="Add"
+						android:textSize="16sp"
+						android:textColor="#D7CCC8"
+						android:layout_gravity="center_horizontal" />
+				</LinearLayout>
+			</ScrollView>
+			<LinearLayout
+				android:id="@+id/settings_lin"
+				android:layout_width="match_parent"
+				android:layout_height="460dp"
+				android:padding="5dp"
+				android:background="#8D6E63"
+				android:orientation="vertical">
+				<TextView
+					android:id="@+id/settings_text"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:padding="5dp"
+					android:text="Settings"
+					android:textSize="16sp"
+					android:textStyle="bold"
+					android:textColor="#D7CCC8"
+					android:layout_gravity="center_horizontal" />
+				<LinearLayout
+					android:id="@+id/sortParam_lin"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="10dp"
+					android:padding="4dp"
+					android:orientation="horizontal">
+					<TextView
+						android:id="@+id/sortParam_text"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:text="Sort by"
+						android:textSize="14sp"
+						android:textColor="#D7CCC8" />
+					<Spinner
+						android:id="@+id/sortBy_spinner"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:spinnerMode="dropdown"
+						android:textColor="#FFFFFF" />
+				</LinearLayout>
+				<EditText
+					android:id="@+id/transferPath_edit"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:layout_marginBottom="5dp"
+					android:padding="8dp"
+					android:textSize="12sp"
+					android:textColor="#D7CCC8"
+					android:hint="Export path (Starting from PhoneStorage; Downloads/TelephoneBook by default)"
+					android:textColorHint="#BCAAA4"
+					android:layout_gravity="center_horizontal"
+					android:maxLength="128" />
+				<LinearLayout
+					android:id="@+id/dataTransfer_lin"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginBottom="10dp"
+					android:padding="4dp"
+					android:gravity="center_horizontal"
+					android:orientation="horizontal">
+					<Button
+						android:id="@+id/import_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginRight="25dp"
+						android:padding="5dp"
+						android:background="#5D4037"
+						android:text="Import"
+						android:textSize="14sp"
+						android:textColor="#BCAAA4" />
+					<Button
+						android:id="@+id/export_button"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="25dp"
+						android:padding="5dp"
+						android:background="#6D4C41"
+						android:text="Export"
+						android:textSize="14sp"
+						android:textColor="#D7CCC8" />
+				</LinearLayout>
+				<Button
+					android:id="@+id/deleteAll_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:padding="5dp"
+					android:background="#5D4037"
+					android:text="Delete all contacts"
+					android:textSize="14sp"
+					android:textColor="#EF9A9A"
+					android:layout_gravity="center_horizontal" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
