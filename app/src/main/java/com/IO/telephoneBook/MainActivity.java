@@ -228,10 +228,10 @@ public class MainActivity extends AppCompatActivity {
 							}
 						}
 						_animation(8);
-						SketchwareUtil.hideKeyboard(getApplicationContext());
+						CustomUtil.hideKeyboard(getApplicationContext());
 					}
 					else {
-						SketchwareUtil.showMessage(getApplicationContext(), "Contact must contain a phone number at least");
+						CustomUtil.showMessage(getApplicationContext(), "Contact must contain a phone number at least");
 					}
 				}catch(Exception e){
 					final String exc = e.toString() + " >>> " + e.getStackTrace()[0].getLineNumber();
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
 						FileUtil.makeDir(path);
 					}
 					FileUtil.writeFile(path + filename, data);
-					SketchwareUtil.showMessage(getApplicationContext(), "Exported to " + path + filename);
+					CustomUtil.showMessage(getApplicationContext(), "Exported to " + path + filename);
 				}catch(Exception e){
 					final String exc = e.toString() + " >>> " + e.getStackTrace()[0].getLineNumber();
 					dial.setTitle("Error occurred when exporting contacts");
@@ -379,7 +379,7 @@ public class MainActivity extends AppCompatActivity {
 					
 					sp.edit().putString("contacts", data).commit();
 					_update();
-					SketchwareUtil.showMessage(getApplicationContext(), "Imported from " + path);
+					CustomUtil.showMessage(getApplicationContext(), "Imported from " + path);
 				}catch(Exception e){
 					final String exc = e.toString() + " >>> " + e.getStackTrace()[0].getLineNumber();
 					dial.setTitle("Error occurred when importing contacts");
@@ -476,11 +476,11 @@ public class MainActivity extends AppCompatActivity {
 	public void _style () {
 		//Layout params
 		
-		int height = SketchwareUtil.getDisplayHeightPixels(getApplicationContext()) - 28;
+		int height = CustomUtil.getDisplayHeightPixels(getApplicationContext()) - 28;
 		int contacts = (int)(height  * 0.88);
 		int toolbar = height - contacts;
-		toolbar_lin.setLayoutParams(new LinearLayout.LayoutParams((int)(SketchwareUtil.getDisplayWidthPixels(getApplicationContext())), (int)(toolbar)));
-		contacts_lin.setLayoutParams(new LinearLayout.LayoutParams((int)(SketchwareUtil.getDisplayWidthPixels(getApplicationContext())), (int)(contacts)));
+		toolbar_lin.setLayoutParams(new LinearLayout.LayoutParams((int)(CustomUtil.getDisplayWidthPixels(getApplicationContext())), (int)(toolbar)));
+		contacts_lin.setLayoutParams(new LinearLayout.LayoutParams((int)(CustomUtil.getDisplayWidthPixels(getApplicationContext())), (int)(contacts)));
 		//Corners
 		sort_wavesidebar.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b, int c, int d) { this.setCornerRadius(a); this.setStroke(b, c); this.setColor(d); return this; } }.getIns((int)30, (int)1, 0xFFFFF2CC, 0xFFF4B183));
 		contact_lin.setBackground(new GradientDrawable() { public GradientDrawable getIns(int a, int b, int c, int d) { this.setCornerRadius(a); this.setStroke(b, c); this.setColor(d); return this; } }.getIns((int)16, (int)5, 0xFFD7CCC8, 0xFFDFA67B));
@@ -550,7 +550,8 @@ public class MainActivity extends AppCompatActivity {
 						public void onAnimationRepeat(Animator _param1){}
 						
 						@Override
-						public void onAnimationEnd(Animator _param1){
+						public void onAnimationEnd(Animator _param1){
+
 					contacts_lin.setAlpha((float)(1));
 					contacts_lin.setVisibility(View.GONE);
 				}
@@ -580,7 +581,8 @@ public class MainActivity extends AppCompatActivity {
 						public void onAnimationRepeat(Animator _param1){}
 						
 						@Override
-						public void onAnimationEnd(Animator _param1){
+						public void onAnimationEnd(Animator _param1){
+
 					contacts_lin.setAlpha((float)(1));
 					contacts_lin.setVisibility(View.GONE);
 				}
@@ -608,7 +610,8 @@ public class MainActivity extends AppCompatActivity {
 						public void onAnimationRepeat(Animator _param1){}
 						
 						@Override
-						public void onAnimationEnd(Animator _param1){
+						public void onAnimationEnd(Animator _param1){
+
 					contact_scroll.setAlpha((float)(1));
 					contact_scroll.setVisibility(View.GONE);
 				}
@@ -664,7 +667,8 @@ public class MainActivity extends AppCompatActivity {
 						public void onAnimationRepeat(Animator _param1){}
 						
 						@Override
-						public void onAnimationEnd(Animator _param1){
+						public void onAnimationEnd(Animator _param1){
+
 					contacts_lin.setAlpha((float)(1));
 					contacts_lin.setVisibility(View.GONE);
 					toolbarNewContact.setVisibility(View.INVISIBLE);
@@ -694,7 +698,8 @@ public class MainActivity extends AppCompatActivity {
 						public void onAnimationRepeat(Animator _param1){}
 						
 						@Override
-						public void onAnimationEnd(Animator _param1){
+						public void onAnimationEnd(Animator _param1){
+
 					settings_lin.setAlpha((float)(1));
 					settings_lin.setVisibility(View.GONE);
 					toolbarNewContact.setVisibility(View.VISIBLE);
@@ -747,17 +752,6 @@ public class MainActivity extends AppCompatActivity {
 	}
 	
 	@Deprecated
-	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
-		ArrayList<Double> _result = new ArrayList<Double>();
-		SparseBooleanArray _arr = _list.getCheckedItemPositions();
-		for (int _iIdx = 0; _iIdx < _arr.size(); _iIdx++) {
-			if (_arr.valueAt(_iIdx))
-			_result.add((double)_arr.keyAt(_iIdx));
-		}
-		return _result;
-	}
-	
-	@Deprecated
 	public float getDip(int _input) {
 		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
 	}
@@ -771,4 +765,4 @@ public class MainActivity extends AppCompatActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
-}
+}
