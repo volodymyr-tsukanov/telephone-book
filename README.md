@@ -1,6 +1,6 @@
 # telephone-book
 Java; Android; Informatyka l stopień 2 semestr</br>
-Projekt zaliczeniowy, przedmiot: <i>Programowanie obiektowe w C++</i>
+Projekt zaliczeniowy, przedmiot: <i>Programowanie obiektowe w C++</i></br></br>
 
 
 Shield: [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
