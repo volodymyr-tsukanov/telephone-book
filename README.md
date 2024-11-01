@@ -1,11 +1,12 @@
 # telephone-book
-Java; Android; Informatyka l stopień 2 semestr</br>
-Projekt zaliczeniowy, przedmiot: <i>Programowanie obiektowe w C++</i></br></br>
+Projekt zaliczeniowy, przedmiot: _Programowanie obiektowe w C++_ </br>
+
+**Java**, **Android**; Informatyka l stopień 2 semestr </br></br>
 
 
-Shield: [![CC BY-NC 4.0][cc-by-nc-shield]][cc-by-nc]
+Shields: [![EPL-2.0][epl2-shield]][epl2]
 
-[cc-by-nc]: http://creativecommons.org/licenses/by-nc/4.0/
-[cc-by-nc-shield]: https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg
+[epl2]: https://www.eclipse.org/legal/epl-2.0/
+[epl2-shield]: https://img.shields.io/badge/License-EPL%202.0-lightgrey.svg
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+<a rel="license" href="https://www.eclipse.org/legal/epl-2.0/"><img alt="Eclipse Public License" height=47px style="border-width:0" src="https://www.eclipse.org/eclipse.org-common/themes/solstice/public/images/logo/eclipse-foundation-grey-orange.svg" /></a></br>This work is licensed under the <a rel="license" href="https://www.eclipse.org/legal/epl-2.0/">Eclipse Public License 2.0</a>.
