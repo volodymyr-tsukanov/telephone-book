@@ -1,6 +1,20 @@
 # telephone-book
 Projekt zaliczeniowy, przedmiot: _Programowanie obiektowe w C++_ </br>
 
+![AppIcon](app/src/main/res/drawable-xhdpi/app_icon.png)
+<details>
+<summary>ScreenShots</summary>
+
+<picture>
+  <img alt="Main screen" height=540px src="https://github.com/volodymyr-tsukanov/telephone-book/blob/assets/assets/screenshots/main.jpg">
+</picture>
+<picture>
+  <img alt="Contact view screen" height=540px src="https://github.com/volodymyr-tsukanov/telephone-book/blob/assets/assets/screenshots/view.jpg">
+</picture>
+
+
+</details>
+
 **Java**, **Android**; Informatyka l stopień 2 semestr </br></br>
 
 
