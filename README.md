@@ -15,8 +15,10 @@ Projekt zaliczeniowy, przedmiot: _Programowanie obiektowe w C++_ </br>
 
 </details>
 
-**Java**, **Android**; Informatyka l stopień 2 semestr </br></br>
+**Java**, **Android**; Informatyka l stopień 2 semestr <br><br>
 
+
+![Finished](https://img.shields.io/badge/status-Finished%20%F0%9F%94%9A-3CB371?style=for-the-badge&logo=github) <br>
 
 Shields: [![EPL-2.0][epl2-shield]][epl2]
 
